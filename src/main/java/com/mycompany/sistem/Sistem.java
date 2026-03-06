@@ -9,6 +9,43 @@ import java.util.Scanner;
 public class Sistem {
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
+        Manager manager = new Manager("M01", "Andi", "Main Branch", "BR01");
+        Teller teller = new Teller("T01", "Budi", "Morning");
+
+        User user = null;
+
+        int choice;
+
+        do {
+            System.out.println("\n=== BANK SYSTEM ===");
+            System.out.println("1. Create Account");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Check Balance");
+            System.out.println("5. Exit");
+            System.out.print("Pilih menu: ");
+
+            choice = input.nextInt();
+             Scanner input = new Scanner(System.in);
+
+        Manager manager = new Manager("M01", "Andi", "Main Branch", "BR01");
+        Teller teller = new Teller("T01", "Budi", "Morning");
+
+        User user = null;
+
+        int choice;
+
+        do {
+            System.out.println("\n=== BANK SYSTEM ===");
+            System.out.println("1. Create Account");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Check Balance");
+            System.out.println("5. Exit");
+            System.out.print("Pilih menu: ");
+
+            choice = input.nextInt();
     }
 }
