@@ -1,11 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.sistem;
-
-public class userbank {
-    package com.mycompany.sistem;
 
 public class User {
     private String accountNumber;
@@ -25,5 +18,43 @@ public class User {
         setBalance(balance);
         this.phoneNumber = phoneNumber;
         this.accountType = accountType;
+    }
+
+    // Getter
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    // Setter dengan validasi
+    public void setBalance(double balance) {
+        if (balance >= 0) {
+            this.balance = balance;
+        } else {
+            System.out.println("Saldo tidak boleh negatif!");
+        }
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        if (phoneNumber.length() >= 10) {
+            this.phoneNumber = phoneNumber;
+        } else {
+            System.out.println("Nomor telepon tidak valid!");
+        }
+    }
+
+    public void displayUserInfo() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Name: " + name);
+        System.out.println("Balance: " + balance);
+        System.out.println("Phone: " + phoneNumber);
+        System.out.println("Account Type: " + accountType);
     }
 }
