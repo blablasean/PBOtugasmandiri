@@ -47,5 +47,29 @@ public class Sistem {
             System.out.print("Pilih menu: ");
 
             choice = input.nextInt();
+            switch (choice) {
+
+                case 1:
+                    input.nextLine();
+                    System.out.print("Account Number: ");
+                    String acc = input.nextLine();
+
+                    System.out.print("Name: ");
+                    String name = input.nextLine();
+
+                    System.out.print("Initial Balance: ");
+                    double bal = input.nextDouble();
+
+                    input.nextLine();
+                    System.out.print("Phone: ");
+                    String phone = input.nextLine();
+
+                    System.out.print("Account Type: ");
+                    String type = input.nextLine();
+
+                    user = manager.createAccount(acc, name, bal, phone, type);
+                    break;
+
+                case 2:
     }
 }
