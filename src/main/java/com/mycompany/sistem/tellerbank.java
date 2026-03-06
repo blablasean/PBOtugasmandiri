@@ -4,6 +4,44 @@
  */
 package com.mycompany.sistem;
 
-public class tellerbank {
+public class Teller {
 
+    private String tellerId;
+    private String tellerName;
+    private String shift;
+
+    public Teller(String tellerId, String tellerName, String shift) {
+        this.tellerId = tellerId;
+        this.tellerName = tellerName;
+        this.shift = shift;
+    }
+
+    // Deposit
+    public void deposit(User user, double amount) {
+        if (amount > 0) { // VALIDATION 1
+            double newBalance = user.getBalance() + amount;
+            user.setBalance(newBalance);
+            System.out.println("Deposit berhasil. Saldo sekarang: " + user.getBalance());
+        } else {
+            System.out.println("Jumlah deposit harus lebih dari 0!");
+        }
+    }
+
+    // Withdraw
+    public void withdraw(User user, double amount) {
+        if (amount <= 0) { // VALIDATION 2
+            System.out.println("Jumlah penarikan tidak valid!");
+        } else if (amount > user.getBalance()) { // VALIDATION 3
+            System.out.println("Saldo tidak cukup!");
+        } else {
+            double newBalance = user.getBalance() - amount;
+            user.setBalance(newBalance);
+            System.out.println("Withdraw berhasil. Saldo sekarang: " + user.getBalance());
+        }
+    }
+
+    // Cek saldo
+    public void checkBalance(User user) {
+        System.out.println("Saldo saat ini: " + user.getBalance());
+    }
 }
