@@ -71,5 +71,38 @@ public class Sistem {
                     break;
 
                 case 2:
+                                   if (user == null) {
+                        System.out.println("Buat akun dulu!");
+                    } else {
+                        System.out.print("Jumlah deposit: ");
+                        double dep = input.nextDouble();
+                        teller.deposit(user, dep);
+                    }
+                    break;
+
+                case 3:
+                    if (user == null) {
+                        System.out.println("Buat akun dulu!");
+                    } else {
+                        System.out.print("Jumlah withdraw: ");
+                        double wit = input.nextDouble();
+                        teller.withdraw(user, wit);
+                    }
+                    break;
+
+                case 4:
+                    if (user == null) {
+                        System.out.println("Buat akun dulu!");
+                    } else {
+                        teller.checkBalance(user);
+                    }
+                    break;
+
+            }
+
+        } while (choice != 5);
+
+        System.out.println("Program selesai.");
+    }
     }
 }
