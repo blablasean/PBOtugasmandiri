@@ -4,13 +4,13 @@
  */
 package com.mycompany.sistem;
 
-public class Teller {
+public class tellerbank{
 
     private String tellerId;
     private String tellerName;
     private String shift;
 
-    public Teller(String tellerId, String tellerName, String shift) {
+    public tellerbank(String tellerId, String tellerName, String shift) {
         this.tellerId = tellerId;
         this.tellerName = tellerName;
         this.shift = shift;

@@ -4,7 +4,7 @@
  */
 package com.mycompany.sistem;
 
-public class Manager {
+public class managerbank {
 
     private String managerId;
     private String managerName;
@@ -12,7 +12,7 @@ public class Manager {
     private String branchCode;
     private int totalAccounts;
 
-    public Manager(String managerId, String managerName, String branchName, String branchCode) {
+    public managerbank(String managerId, String managerName, String branchName, String branchCode) {
         this.managerId = managerId;
         this.managerName = managerName;
         this.branchName = branchName;
