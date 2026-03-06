@@ -6,16 +6,16 @@ package com.mycompany.sistem;
 
 import java.util.Scanner;
 
-public class Main {
+public class Sistem{
 
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
-        Manager manager = new Manager("M01", "Andi", "Main Branch", "BR01");
-        Teller teller = new Teller("T01", "Budi", "Morning");
+        managerbank manager = new managerbank("M01", "Andi", "Main Branch", "BR01");
+        tellerbank teller = new tellerbank("T01", "Budi", "Morning");
 
-        User user = null;
+        userbank user = null;
 
         int choice;
 
@@ -50,7 +50,7 @@ public class Main {
                     System.out.print("Account Type: ");
                     String type = input.nextLine();
 
-                    user = manager.createAccount(acc, name, bal, phone, type);
+                    userbank = manager.createAccount(acc, name, bal, phone, type);
                     break;
 
                 case 2:

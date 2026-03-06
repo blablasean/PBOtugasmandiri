@@ -21,14 +21,14 @@ public class managerbank {
     }
 
     // Create account
-    public User createAccount(String accNumber, String name, double balance, String phone, String type) {
+    public userbank createAccount(String accNumber, String name, double balance, String phone, String type) {
 
         if (balance < 0) {
             System.out.println("Saldo awal tidak boleh negatif!");
             return null;
         }
 
-        User newUser = new User(accNumber, name, balance, phone, type);
+        userbank newUser = new userbank(accNumber, name, balance, phone, type);
         totalAccounts++;
 
         System.out.println("Akun berhasil dibuat!");
