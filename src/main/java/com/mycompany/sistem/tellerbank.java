@@ -17,7 +17,7 @@ public class tellerbank{
     }
 
     // Deposit
-    public void deposit(User user, double amount) {
+    public void deposit(userbank user, double amount) {
         if (amount > 0) { // VALIDATION 1
             double newBalance = user.getBalance() + amount;
             user.setBalance(newBalance);
@@ -28,7 +28,7 @@ public class tellerbank{
     }
 
     // Withdraw
-    public void withdraw(User user, double amount) {
+    public void withdraw(userbank user, double amount) {
         if (amount <= 0) { // VALIDATION 2
             System.out.println("Jumlah penarikan tidak valid!");
         } else if (amount > user.getBalance()) { // VALIDATION 3
@@ -41,7 +41,7 @@ public class tellerbank{
     }
 
     // Cek saldo
-    public void checkBalance(User user) {
+    public void checkBalance(userbank user) {
         System.out.println("Saldo saat ini: " + user.getBalance());
     }
 }

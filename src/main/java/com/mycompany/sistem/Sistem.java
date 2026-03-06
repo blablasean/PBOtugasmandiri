@@ -50,7 +50,7 @@ public class Sistem{
                     System.out.print("Account Type: ");
                     String type = input.nextLine();
 
-                    userbank = manager.createAccount(acc, name, bal, phone, type);
+                    user = manager.createAccount(acc, name, bal, phone, type);
                     break;
 
                 case 2:
